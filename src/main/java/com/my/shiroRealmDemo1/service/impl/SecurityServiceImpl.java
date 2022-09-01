@@ -1,6 +1,6 @@
-package com.my.shiro.service.impl;
+package com.my.shiroRealmDemo1.service.impl;
 
-import com.my.shiro.service.SecurityService;
+import com.my.shiroRealmDemo1.service.SecurityService;
 
 /**
  * @author Gzy

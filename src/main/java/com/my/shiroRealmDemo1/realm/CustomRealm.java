@@ -1,6 +1,6 @@
-package com.my.shiro.realm;
+package com.my.shiroRealmDemo1.realm;
 
-import com.my.shiro.service.impl.SecurityServiceImpl;
+import com.my.shiroRealmDemo1.service.impl.SecurityServiceImpl;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
