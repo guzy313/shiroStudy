@@ -19,4 +19,16 @@ public class TestEncodeAndDecode {
 
     }
 
+    @Test
+    public void testBase64(){
+        String base64Str = "hello";
+
+        String flag = EncodesUtil.encodeBase64(base64Str.getBytes());
+        String afterHandler = new String(EncodesUtil.decodeBase64(flag));
+        System.out.println("是否相同:"+base64Str.equals(afterHandler));
+
+
+    }
+
+
 }
