@@ -15,7 +15,7 @@ public class DigestsUtil {
         //加密方式-散列算法1
         private static final String SHA1 = "SHA-1";
         //加密次数
-        private static final Integer HashIterations = 2;
+        private static final Integer HashIterations = 33;
 
         /**
          * @Description 摘要算法
@@ -36,11 +36,17 @@ public class DigestsUtil {
             return secureRandomNumberGenerator.nextBytes().toHex();
         }
 
-        public static Map<String,String>  entrypyPassword(String password){
+    /**
+     * @Description 生成(hash计算之后)密码 和 salt明文
+     * @param password
+     * @return salt, password
+     */
+    public static Map<String,String>  entryptPassword(String password){
             Map<String,String> map = new HashMap<>();
             String salt = generateSalt();
-            String s = sha1(password, salt);
-            //TODO
+            String afterHashPassword = sha1(password, salt);
+            map.put("password",afterHashPassword);
+            map.put("salt",salt);
             return map;
         }
 
