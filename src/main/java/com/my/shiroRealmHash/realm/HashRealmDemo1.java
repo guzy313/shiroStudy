@@ -20,7 +20,7 @@ import java.util.Map;
 public class HashRealmDemo1 extends AuthorizingRealm {
 
     public HashRealmDemo1(){
-        //指定密码匹配方式sha1
+        //指定密码匹配方式sha1 --密码比较器
         HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher(DigestsUtil.SHA1);
         //指定密码迭代次数
         hashedCredentialsMatcher.setHashIterations(DigestsUtil.HashIterations);
@@ -31,12 +31,13 @@ public class HashRealmDemo1 extends AuthorizingRealm {
 
 
     /**
-     * 授权
+     * 授权—认证之后
      * @param principalCollection
      * @return
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
+
         return null;
     }
 
